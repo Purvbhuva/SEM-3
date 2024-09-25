@@ -1,0 +1,31 @@
+//selection sort
+//accending
+class Lab20A_94
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {10,7,-5,22,15,4,3,5,50};
+		int n = a.length;
+		int min;
+		for(int i=0;i<n-1;i++)//-1 because last element is auto at sorted position
+		{
+			 min = i;
+			for(int j=i+1;j<n;j++)//for finding min index
+			{
+				if(a[j]<a[min])
+				{
+					min = j;
+				}
+			}
+
+			int temp = a[i];
+			a[i] = a[min];
+			a[min] = temp;	
+		}
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(a[i]);
+		}
+
+	}
+}
